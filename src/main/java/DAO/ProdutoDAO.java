@@ -31,7 +31,6 @@ public class ProdutoDAO implements ProductDAO_Interface {
     public boolean cadastrarProduto(ProdutoDTO objproductdto) {
         String sql = "insert into products (nome, quantidade, valor) values (?,?,?)";
         conn = new Conexao().conectaBD();
-        //COLOCAR PARA GERAR O ID, PARA FICAR MAIS FACIL DE ORGANIZAR O ID
         try {
             pstm = conn.prepareStatement(sql);
             pstm.setString(1, objproductdto.getNome());

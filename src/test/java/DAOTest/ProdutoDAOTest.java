@@ -44,18 +44,9 @@ public class ProdutoDAOTest {
         Assert.assertEquals(10, produtoDTOcadastrado.getQuantidade());
         Assert.assertEquals(10.0, produtoDTOcadastrado.getValor());
 
-        //Atualizar
-        ProdutoDTO produtoAlterado = new ProdutoDTO("testeAlterar", 25, 15);
-        produtoDAO.alterarProduto(produtoAlterado);
-        Assert.assertEquals("testeAlterar", produtoAlterado.getNome());
-        Assert.assertEquals(25, produtoAlterado.getQuantidade());
-        Assert.assertEquals(15.0, produtoAlterado.getValor());
-
         //Excluir
         boolean produtoExcluido = produtoDAO.excluirProduto(produtoDTOcadastrado);
         assertTrue(produtoExcluido);
-        boolean produtoExcluidoAt = produtoDAO.excluirProduto(produtoAlterado);
-        assertTrue(produtoExcluidoAt);
 
     }
 

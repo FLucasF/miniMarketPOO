@@ -9,6 +9,15 @@ public class ProdutoDTO {
                 " valor: R$" +this.valor+
                 " quantidade: " +this.quantidade;
     }
+    public ProdutoDTO() {
+        this("",0,0);
+    }
+
+    public ProdutoDTO(String nome, int quantidade, double valor) {
+        this.nome = nome;
+        this.quantidade = quantidade;
+        this.valor = valor;
+    }
 
     public String getNome() {
         return this.nome;
