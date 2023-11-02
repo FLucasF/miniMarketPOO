@@ -14,7 +14,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class FrmRegistrarUsuarioVIEW extends JFrame {
-    private FrmLoginAppVIEW frmLoginAppVIEW;
+    private FrmLoginAppVIEW frmLoginAppVIEW;    
     public FrmRegistrarUsuarioVIEW () {
         setLayout(null);
         setTitle("Cadastro");

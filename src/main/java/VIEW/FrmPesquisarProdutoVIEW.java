@@ -19,7 +19,7 @@ public class FrmPesquisarProdutoVIEW extends JFrame {
 
     public FrmPesquisarProdutoVIEW() {
         setLayout(null);
-        setTitle("Buscar Produto");
+        setTitle("Pesquisar Produto");
         setResizable(false);
         setSize(400, 400);
         setLocationRelativeTo(null);
