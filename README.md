@@ -24,6 +24,8 @@ Na parte do "back end" do aplicativo, foi utilizado [MySQL](https://www.mysql.co
 ### Atualizar
 
 - Atualiza as informações de um produto no bando de dados do aplicativo.
+  
+![AtualizaImage](https://github.com/FLucasF/miniMarketPOO/assets/114606758/02d5df9e-d7aa-42d2-b1d5-0056d7f0d384)
 
 ### Excluir
 
