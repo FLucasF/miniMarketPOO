@@ -3,3 +3,4 @@ Melhorias:
     - Melhorar a interface de interação com o usuário, para ficar mais amigável;
     - Colocar id no objeto produto, para facilitar a manipulação;
     - Criar um método na janela principal para chamar as demais janelas;
+    - Otimização dos métodos de ligação com o servidor, pois ficaram muito repetitivos;
