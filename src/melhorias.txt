@@ -1,0 +1,5 @@
+Melhorias:
+    - Otimizar para tirar a quantidade excessiva de "new", instanciando na classe principal;
+    - Melhorar a interface de interação com o usuário, para ficar mais amigável;
+    - Colocar id no objeto produto, para facilitar a manipulação;
+    - Criar um método na janela principal para chamar as demais janelas;
