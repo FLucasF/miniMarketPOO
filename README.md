@@ -62,6 +62,9 @@ Na parte do "back end" do aplicativo, foi utilizado [MySQL](https://www.mysql.co
 ### Cadastrar
 - É informado o `nome` e a `senha` do usuário, em seguida é cadastrado o usuário no banco de dados do aplicativo para poder utilizar o programa.
 
+![ResgitrarImage](https://github.com/FLucasF/miniMarketPOO/assets/114606758/dd46e227-aaf8-428e-a194-93bccd69c0b3)
+
+
 ## 🔧 Funcionalidades (de forma aprofundada)
 
 ## Produto
