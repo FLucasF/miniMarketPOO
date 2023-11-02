@@ -42,6 +42,8 @@ Na parte do "back end" do aplicativo, foi utilizado [MySQL](https://www.mysql.co
 
 - É informado o `nome` do produto, depois o método de busca retorna o objeto e suas informações que estão salvas no bando de dados do aplicativo.
 
+![PesquisarProduto](https://github.com/FLucasF/miniMarketPOO/assets/114606758/9060132f-1281-4ca4-9275-7aed332e296e)
+
 ### Atualizar
 
 - Atualiza as informações de um produto no bando de dados do aplicativo.
