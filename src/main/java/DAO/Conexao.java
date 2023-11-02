@@ -6,6 +6,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexao {
+    private Connection conn = null;
+
     /*
      * Este método realiza as seguintes ações:
      * 1. Define a URL de conexão com o banco de dados MySQL, que inclui o host, a porta, o nome do banco de dados, o nome de usuário e a senha.
@@ -15,8 +17,6 @@ public class Conexao {
      * @return Uma conexão ativa com o banco de dados MySQL.
      */
     public Connection conectaBD () {
-        Connection conn = null;
-
         try {
             String url = "jdbc:mysql://localhost:3306/bancomarket?user=root&password=1234";
             conn = DriverManager.getConnection(url);

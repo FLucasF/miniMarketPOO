@@ -8,9 +8,9 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 public class UsuarioDAO implements UsuarioDAO_Interface {
-
-    Connection conn = null;
-    PreparedStatement pstm;
+    private UsuarioDTO usuarioDTO;
+    private Connection conn = null;
+    private PreparedStatement pstm;
 
     /*
      * Este método realiza as seguintes ações:
@@ -30,7 +30,6 @@ public class UsuarioDAO implements UsuarioDAO_Interface {
         String sql = "INSERT INTO usuario (nome_usuario, senha_usuario) VALUES (?,?)";
 
         conn = new Conexao().conectaBD();
-        //COLOCAR PARA GERAR O ID, PARA FICAR MAIS FACIL DE ORGANIZAR O ID
         try {
             pstm = conn.prepareStatement(sql);
             pstm.setString(1, objUsuarioDTO.getNome_usuario());

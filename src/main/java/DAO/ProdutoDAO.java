@@ -10,8 +10,9 @@ import java.util.ArrayList;
 
 
 public class ProdutoDAO implements ProductDAO_Interface {
-    Connection conn;
-    PreparedStatement pstm;
+    private ProdutoDTO produto;
+    private Connection conn;
+    private PreparedStatement pstm;
     ArrayList<ProdutoDTO> lista = new ArrayList<>();
 
     /*
