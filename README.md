@@ -7,35 +7,68 @@ Foi utilizado a biblioteca [java.swing](https://docs.oracle.com/javase/8/docs/ap
 Na parte do "back end" do aplicativo, foi utilizado [MySQL](https://www.mysql.com/downloads/) para persistir os dados da aplicação e a versão 19 do [JDK](https://www.oracle.com/java/technologies/javase/jdk19-archive-downloads.html) do java para criar os métodos, sendo a principal linguagem utilizada no projeto.
 
 ## 🔧 Funcionalidades (simplificado)
+
+### Login
+- Entrar no aplicativo para poder usufrir das aplicações.
+  
+![LoginImage](https://github.com/FLucasF/miniMarketPOO/assets/114606758/468a27b9-139f-4cd0-a6fa-7a6341d8a4bb)
+
+### Menu
+- Escolhe uma das opções informadas.
+  
+![MenuImage](https://github.com/FLucasF/miniMarketPOO/assets/114606758/ad1d68f2-2084-43b3-bdf2-a68ccce75745)
+
 ## Produto
 
 ### Cadastrar
 
 - É informado o `nome` do produto, a `quantidade` e o `valor`, depois é efetuado o método que ira cadastrar o produto no bando de dados do aplicativo.
 
+![CadastraImage](https://github.com/FLucasF/miniMarketPOO/assets/114606758/58ea594d-6b36-42f6-909f-6d7224b82556)
+
+### Menu listar
+- Escolhe uma das opções de listar.
+  
+![MenuListaImage](https://github.com/FLucasF/miniMarketPOO/assets/114606758/bc3992fc-b8ef-4d6a-bd9b-f6d6c085abb5)
+
 ### Listar
 
 - Lista os produtos do bando de dados do aplicativo.
+
+![ListaImage](https://github.com/FLucasF/miniMarketPOO/assets/114606758/59e72112-5a97-4b41-a8f9-751d64f19184)
+
 
 ### Buscar
 
 - É informado o `nome` do produto, depois o método de busca retorna o objeto e suas informações que estão salvas no bando de dados do aplicativo.
 
+![PesquisarProduto](https://github.com/FLucasF/miniMarketPOO/assets/114606758/9060132f-1281-4ca4-9275-7aed332e296e)
+
 ### Atualizar
 
 - Atualiza as informações de um produto no bando de dados do aplicativo.
+  
+![AtualizaImage](https://github.com/FLucasF/miniMarketPOO/assets/114606758/02d5df9e-d7aa-42d2-b1d5-0056d7f0d384)
 
 ### Excluir
 
 - É informado o `nome` do produto e em seguida é chamado o método que exclui um produto no bando de dados do aplicativo utilizando o nome para achar o objeto ProdutoDTO.
+
+![ExcluiImage](https://github.com/FLucasF/miniMarketPOO/assets/114606758/4c1d1a13-1b58-4953-b53b-a46adc54b4ab)
+
 
 ## Usuário
 
 ### Cadastrar
 - É informado o `nome` e a `senha` do usuário, em seguida é cadastrado o usuário no banco de dados do aplicativo para poder utilizar o programa.
 
+![ResgitrarImage](https://github.com/FLucasF/miniMarketPOO/assets/114606758/dd46e227-aaf8-428e-a194-93bccd69c0b3)
+
+
 ## 🔧 Funcionalidades (de forma aprofundada)
+
 ## Produto
+
 ### Cadastrar(nome do método: cadastrarProduto)
 
 A método cadastrarProduto é um método que faz parte de uma classe responsável por interagir com um banco de dados. Ela recebe um objeto ProdutoDTO como parâmetro, que contém informações sobre o produto a ser cadastrado, como `nome`, `quantidade` e `valor`. Vou explicar o que esse método faz em detalhes:
