@@ -1,5 +1,7 @@
 package VIEW;
 
+import DAO.ProdutoDAO;
+
 import javax.swing.*;
 import javax.imageio.ImageIO;
 import java.awt.event.ActionEvent;
@@ -11,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class FrmMainMenuVIEW extends JFrame {
+    private ProdutoDAO produtoDAO = new ProdutoDAO();
     public FrmMainMenuVIEW() {
         setTitle("Menu");
         setLayout(null);

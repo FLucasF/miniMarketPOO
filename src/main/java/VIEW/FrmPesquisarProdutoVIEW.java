@@ -15,6 +15,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class FrmPesquisarProdutoVIEW extends JFrame {
+    private ProdutoDAO produtoDAO = new ProdutoDAO();
+
     public FrmPesquisarProdutoVIEW() {
         setLayout(null);
         setTitle("Buscar Produto");
@@ -98,10 +100,10 @@ public class FrmPesquisarProdutoVIEW extends JFrame {
                     ProdutoDTO produtoDTO = new ProdutoDTO();
                     produtoDTO.setNome(nameProduct);
 
-                    ProdutoDAO objproductdao = new ProdutoDAO();
+                    produtoDAO = new ProdutoDAO();
 
                     try {
-                        JOptionPane.showMessageDialog(null, objproductdao.pesquisarProduto(nameProduct));
+                        JOptionPane.showMessageDialog(null, produtoDAO.pesquisarProduto(nameProduct));
                     } catch (Exception g) {
                         JOptionPane.showMessageDialog(null, "Produto não encontrado!");
                         g.printStackTrace();

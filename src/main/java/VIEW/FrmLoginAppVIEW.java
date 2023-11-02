@@ -1,5 +1,6 @@
 package VIEW;
 
+import DAO.ProdutoDAO;
 import DAO.UsuarioDAO;
 import DTO.UsuarioDTO;
 import javax.imageio.ImageIO;
@@ -16,6 +17,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class FrmLoginAppVIEW extends javax.swing.JFrame {
+    private UsuarioDAO usuarioDAO;
     public FrmLoginAppVIEW() {
         setLayout(null);
         setTitle("Login");
@@ -114,8 +116,8 @@ public class FrmLoginAppVIEW extends javax.swing.JFrame {
                     objusuariodto.setNome_usuario(nome_usuario);
                     objusuariodto.setSenha_usuario(senha_usuario);
 
-                    UsuarioDAO objusuariodao = new UsuarioDAO();
-                    ResultSet rsusuariodao = objusuariodao.autenticacaoUsuario(objusuariodto);
+                    usuarioDAO = new UsuarioDAO();
+                    ResultSet rsusuariodao = usuarioDAO.autenticacaoUsuario(objusuariodto);
 
                     if (rsusuariodao.next()) { //VERIFICAÇÃO
                         FrmMainMenuVIEW frmMainMenuVIEW = new FrmMainMenuVIEW();

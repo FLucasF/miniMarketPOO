@@ -11,7 +11,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class FrmMenuOpcoesListarVIEW extends JFrame {
-    private FrmListarProdutosVIEW frmListarProdutosVIEW = new FrmListarProdutosVIEW();
+    private FrmListarProdutosVIEW frmListarProdutosVIEW;
     public FrmMenuOpcoesListarVIEW() {
         setLayout(null);
         setTitle("Listar Produtos");
@@ -92,6 +92,7 @@ public class FrmMenuOpcoesListarVIEW extends JFrame {
      */
     private void btnListarProduct(ActionEvent e) {
         dispose();
+        FrmListarProdutosVIEW frmListarProdutosVIEW = new FrmListarProdutosVIEW();
         frmListarProdutosVIEW.listarProduto();
     }
 
@@ -103,6 +104,7 @@ public class FrmMenuOpcoesListarVIEW extends JFrame {
      */
     private void btnListarOrdemAlfabetica(ActionEvent e) {
         dispose();
+        FrmListarProdutosVIEW frmListarProdutosVIEW = new FrmListarProdutosVIEW();
         frmListarProdutosVIEW.listarProdutosAlfabetico();
     }
     /*
@@ -113,6 +115,7 @@ public class FrmMenuOpcoesListarVIEW extends JFrame {
      */
     private void btnListarValorMaiorMenor(ActionEvent e) {
         dispose();
+        FrmListarProdutosVIEW frmListarProdutosVIEW = new FrmListarProdutosVIEW();
         frmListarProdutosVIEW.listarProdutoValorMenor();
 
     }

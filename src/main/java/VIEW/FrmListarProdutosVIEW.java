@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class FrmListarProdutosVIEW extends JFrame {
     private DefaultTableModel tableModel;
     private JTable productTable;
+    private ProdutoDAO produtoDAO = new ProdutoDAO();
 
     public FrmListarProdutosVIEW() {
         setTitle("Listar Produtos");
@@ -109,7 +110,7 @@ public class FrmListarProdutosVIEW extends JFrame {
      */
     public void listarProdutoValorMenor() {
         tableModel.setRowCount(0);//LIMPAR A TABELA
-        ProdutoDAO produtoDAO = new ProdutoDAO();
+        produtoDAO = new ProdutoDAO();
 
         try {
             // Chame o método listarProdutos para obter a lista de produtos
