@@ -144,7 +144,6 @@ public class ProdutoDAO implements ProductDAO_Interface {
                 int quantidade = rs.getInt("quantidade");
                 double valor = rs.getDouble("valor");
 
-                // Crie um objeto ProdutoDTO com os dados recuperados e adicione à lista
                 ProdutoDTO product = new ProdutoDTO();
                 product.setNome(nome);
                 product.setQuantidade(quantidade);
@@ -190,7 +189,6 @@ public class ProdutoDAO implements ProductDAO_Interface {
                 int quantidade = rs.getInt("quantidade");
                 double valor = rs.getDouble("valor");
 
-                // Crie um objeto ProdutoDTO com os dados recuperados e adicione à lista
                 ProdutoDTO product = new ProdutoDTO();
                 product.setNome(nome);
                 product.setQuantidade(quantidade);
@@ -236,7 +234,6 @@ public class ProdutoDAO implements ProductDAO_Interface {
                 int quantidade = rs.getInt("quantidade");
                 double valor = rs.getDouble("valor");
 
-                // Crie um objeto ProdutoDTO com os dados recuperados e adicione à lista
                 ProdutoDTO product = new ProdutoDTO();
                 product.setNome(nome);
                 product.setQuantidade(quantidade);
