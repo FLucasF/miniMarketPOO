@@ -300,7 +300,7 @@ Mencione as ferramentas que você usou para criar seu projeto
 
 ## 📌 Versão
 - Java - JDK 19
-- Maven - 
+- Maven - 4.0.0
 - MySQL - 8.0.33
 - Junit - 4.13.2
 ## ✒️ Autores
