@@ -13,7 +13,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-    //UI UTILITS
 public class FrmExcluirProdutoVIEW extends JFrame {
     private ProdutoDAO produtoDAO = new ProdutoDAO();
     public FrmExcluirProdutoVIEW() {
@@ -62,14 +61,12 @@ public class FrmExcluirProdutoVIEW extends JFrame {
             img = ImageIO.read(new File("src" + File.separator + "main" + File.separator +
                     "java" + File.separator + "VIEW" + File.separator + "imagem" + File.separator +
                     "backGroundFuncionalidades.png"));
-
             instImage = img.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);
             JLabel image = new JLabel();
             ImageIcon imageIcon = new ImageIcon(instImage);
             image.setBounds(-14, 0, this.getWidth(), this.getHeight());
             image.setIcon(imageIcon);
             this.add(image);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -89,7 +86,6 @@ public class FrmExcluirProdutoVIEW extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String nameProduct;
-
                 try {
                     nameProduct = txtExcluir.getText();
 
@@ -97,22 +93,17 @@ public class FrmExcluirProdutoVIEW extends JFrame {
                         JOptionPane.showMessageDialog(null, "Informe algum nome!");
                         return;
                     }
-
                     ProdutoDTO produtoDTO = new ProdutoDTO();
                     produtoDTO.setNome(nameProduct);
-
                     if(!produtoDAO.verificaProduto(produtoDTO.getNome())) {
                         JOptionPane.showMessageDialog(null, "Não existe produto com este nome");
                         return;
                     }
-
-
                     if (produtoDAO.excluirProduto(produtoDTO)) {
                         JOptionPane.showMessageDialog(null, "Produto excluido com sucesso!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Não foi possivel excluir o produto!");
                     }
-
                     int opcao = JOptionPane.showOptionDialog(
                             null,
                             "Deseja excluir novamente?",
@@ -123,13 +114,11 @@ public class FrmExcluirProdutoVIEW extends JFrame {
                             null,
                             null
                     );
-
                     if (opcao == JOptionPane.NO_OPTION) {
                         FrmMainMenuVIEW frmMainMenuVIEW = new FrmMainMenuVIEW();
                         frmMainMenuVIEW.setVisible(true);
                         dispose();
                     }
-
                 }catch (NullPointerException a) {
                     JOptionPane.showMessageDialog(null, "Verifique se as informações foram adicionadas corretamente!");
                 }
@@ -151,5 +140,4 @@ public class FrmExcluirProdutoVIEW extends JFrame {
             }
         });
     }
-
 }

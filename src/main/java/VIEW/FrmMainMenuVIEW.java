@@ -14,6 +14,7 @@ import java.io.IOException;
 
 public class FrmMainMenuVIEW extends JFrame {
     private ProdutoDAO produtoDAO = new ProdutoDAO();
+
     public FrmMainMenuVIEW() {
         setTitle("Menu");
         setLayout(null);
@@ -22,9 +23,8 @@ public class FrmMainMenuVIEW extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
 
-
         JLabel label = new JLabel("Market");
-        label.setBounds(120,1,400,50);
+        label.setBounds(120, 1, 400, 50);
         label.setFont(new Font("Arial", Font.BOLD, 40));
         label.setForeground(Color.black);
         add(label);
@@ -92,19 +92,17 @@ public class FrmMainMenuVIEW extends JFrame {
          * 4. Chama o método "dispose()" na janela atual, que libera os recursos associados à janela e a fecha de forma controlada.
          */
         this.addWindowListener(new WindowAdapter() {
-            public void windowClosing (WindowEvent e) {
+            public void windowClosing(WindowEvent e) {
                 FrmLoginAppVIEW frmLoginAppVIEW = new FrmLoginAppVIEW();
                 frmLoginAppVIEW.setVisible(true);
                 dispose();
             }
         });
-
         btnCadastrarMenu.addActionListener(this::btnCadastrarMenu);
         btnAtualizarMenu.addActionListener(this::btnAtualizarMenu);
         btnExcluirMenu.addActionListener(this::btnExcluirMenu);
         btnListarMenu.addActionListener(this::btnListarMenu);
         btnBuscarProduto.addActionListener(this::btnBuscarProduto);
-
     }
 
     /*
@@ -166,5 +164,4 @@ public class FrmMainMenuVIEW extends JFrame {
         frmPesquisarProdutoVIEW.setVisible(true);
         dispose();
     }
-
 }

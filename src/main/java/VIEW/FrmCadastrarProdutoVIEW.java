@@ -19,7 +19,6 @@ public class FrmCadastrarProdutoVIEW extends JFrame {
         setSize(400, 400);
         setLocationRelativeTo(null);
 
-
         JLabel txtExplicacao = new JLabel("Informe as seguintes informações para cadastrar o produto");
         txtExplicacao.setBounds(20, 5, 400, 20);
         txtExplicacao.setFont(new Font("Arial", Font.BOLD, 12));
@@ -114,34 +113,27 @@ public class FrmCadastrarProdutoVIEW extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String nome, quantidade, valor;
-
                 try {//PEGAR O TEXTO DOS JtextField
                     nome = txtNomeCadastrar.getText();
                     quantidade = txtQuantidadeCadastrar.getText();
                     valor = txtValorCadastrar.getText();
-
                     if(nome.isEmpty() || quantidade.isEmpty() || valor.isEmpty()) { //VERIFICAR SE EXISTE INFORMAÇÕES
                         JOptionPane.showMessageDialog(null, "Verifique se colocou as informações corretamente");
                         return;
                     }
-
                     ProdutoDTO produtoDTO = new ProdutoDTO();
                     produtoDTO.setNome(nome);
                     produtoDTO.setQuantidade(Integer.parseInt(quantidade));
                     produtoDTO.setValor(Double.parseDouble(valor));
-
                     if(produtoDAO.verificaProduto(produtoDTO.getNome())) {
                         JOptionPane.showMessageDialog(null, "Já existe produto com este nome");
                         return;
                     }
-
                     if(produtoDAO.cadastrarProduto(produtoDTO)) {
                         JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Falha ao cadastrar produto!");
                     }
-
-
                     int opcao = JOptionPane.showOptionDialog(
                             null,
                             "Deseja cadastrar novamente?",
@@ -152,13 +144,11 @@ public class FrmCadastrarProdutoVIEW extends JFrame {
                             null,
                             null
                     );
-
                     if (opcao == JOptionPane.NO_OPTION) {
                         FrmMainMenuVIEW frmMainMenuVIEW = new FrmMainMenuVIEW();
                         frmMainMenuVIEW.setVisible(true);
                         dispose();
                     }
-
                 } catch (NullPointerException a) {
                     JOptionPane.showMessageDialog(null, "Verifique se as informações foram colocadas corretamente!");
                 }
@@ -179,7 +169,5 @@ public class FrmCadastrarProdutoVIEW extends JFrame {
                 dispose();
             }
         });
-
     }
-
 }

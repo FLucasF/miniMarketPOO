@@ -81,8 +81,6 @@ public class FrmMenuOpcoesListarVIEW extends JFrame {
                 dispose();
             }
         });
-
-
     }
     /*
      * Este método realiza as seguintes ações:
@@ -117,8 +115,5 @@ public class FrmMenuOpcoesListarVIEW extends JFrame {
         dispose();
         FrmListarProdutosVIEW frmListarProdutosVIEW = new FrmListarProdutosVIEW();
         frmListarProdutosVIEW.listarProdutoValorMenor();
-
     }
-
-
 }

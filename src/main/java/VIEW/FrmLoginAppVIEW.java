@@ -85,8 +85,6 @@ public class FrmLoginAppVIEW extends javax.swing.JFrame {
             image.setBounds(-14, 0, this.getWidth(), this.getHeight());
             image.setIcon(imageIcon);
             this.add(image);
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -108,26 +106,20 @@ public class FrmLoginAppVIEW extends javax.swing.JFrame {
                 try {
                     String nome_usuario;
                     String senha_usuario;
-
                     nome_usuario = txtLoginUser.getText();
                     senha_usuario = txtSenhaUser.getText();
-
                     UsuarioDTO objusuariodto = new UsuarioDTO();
                     objusuariodto.setNome_usuario(nome_usuario);
                     objusuariodto.setSenha_usuario(senha_usuario);
-
                     usuarioDAO = new UsuarioDAO();
                     ResultSet rsusuariodao = usuarioDAO.autenticacaoUsuario(objusuariodto);
-
                     if (rsusuariodao.next()) { //VERIFICAÇÃO
                         FrmMainMenuVIEW frmMainMenuVIEW = new FrmMainMenuVIEW();
                         frmMainMenuVIEW.setVisible(true);
                         dispose();
-
                     } else {
                         JOptionPane.showMessageDialog(null, "Usuário ou Senha Inválida.");
                     }
-
                 } catch (SQLException a) {
                     JOptionPane.showMessageDialog(null, "FrmLoginVIEWideia" + a);
                 }

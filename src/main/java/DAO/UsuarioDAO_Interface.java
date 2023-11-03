@@ -1,7 +1,6 @@
 package DAO;
 
 import DTO.UsuarioDTO;
-
 import java.sql.ResultSet;
 
 public interface UsuarioDAO_Interface {

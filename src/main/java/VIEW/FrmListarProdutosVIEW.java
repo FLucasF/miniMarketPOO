@@ -9,7 +9,6 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
-
 public class FrmListarProdutosVIEW extends JFrame {
     private DefaultTableModel tableModel;
     private JTable productTable;
@@ -48,8 +47,6 @@ public class FrmListarProdutosVIEW extends JFrame {
                 dispose();
             }
         });
-
-
     }
     /*
      * Este método limpa a tabela e preenche-a com a lista de produtos obtida a partir da classe ProdutoDAO.
@@ -63,10 +60,8 @@ public class FrmListarProdutosVIEW extends JFrame {
     public void listarProduto() {
         tableModel.setRowCount(0); //LIMPAR A TABELA
         ProdutoDAO produtoDAO = new ProdutoDAO();
-
         try {
             ArrayList<ProdutoDTO> produtos = produtoDAO.listarProduto();
-
             // ATUALIZAR A TABELA COM OS PRODUTOS RETORNADOS
             for (ProdutoDTO produto : produtos) {
                 tableModel.addRow(new Object[]{produto.getNome(), produto.getQuantidade(), produto.getValor()});
@@ -88,7 +83,6 @@ public class FrmListarProdutosVIEW extends JFrame {
     public void listarProdutosAlfabetico() {
         tableModel.setRowCount(0);//LIMPAR A TABELA
         ProdutoDAO produtoDAO = new ProdutoDAO();
-
         try {
             ArrayList<ProdutoDTO> produtos = produtoDAO.listarProdutoOrdemAlfabetica();
 
@@ -111,9 +105,8 @@ public class FrmListarProdutosVIEW extends JFrame {
     public void listarProdutoValorMenor() {
         tableModel.setRowCount(0);//LIMPAR A TABELA
         produtoDAO = new ProdutoDAO();
-
         try {
-            // Chame o método listarProdutos para obter a lista de produtos
+            //MÉTODO PARA OBTER A LISTA DE PRODUTOS
             ArrayList<ProdutoDTO> produtos = produtoDAO.listarProdutoValorCrescente();
 
             // ATUALIZAR A TABELA COM OS PRODUTOS RETORNADOS

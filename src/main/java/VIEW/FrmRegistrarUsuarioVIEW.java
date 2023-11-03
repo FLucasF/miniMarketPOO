@@ -74,8 +74,6 @@ public class FrmRegistrarUsuarioVIEW extends JFrame {
             image.setBounds(-14, 0, this.getWidth(), this.getHeight());
             image.setIcon(imageIcon);
             this.add(image);
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -95,30 +93,24 @@ public class FrmRegistrarUsuarioVIEW extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String nome, password;
-
                 try {
                     nome = txtLoginUser.getText();
                     password = txtSenhaUser.getText();
-
                     if(nome.isEmpty() || password.isEmpty()) {
                         JOptionPane.showMessageDialog(null, "Digite todas as informações pedidas!");
                         return;
                     }
-
                     UsuarioDTO usuarioDTO = new UsuarioDTO();
                     usuarioDTO.setNome_usuario(nome);
                     usuarioDTO.setSenha_usuario(password);
-
                     UsuarioDAO usuarioDAO = new UsuarioDAO();
                     if(usuarioDAO.cadastrarUsuario(usuarioDTO)) {
                         JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Houve uma falha no cadastro!");
                     }
-
                     frmLoginAppVIEW = new FrmLoginAppVIEW();
                     dispose();
-
                 } catch (NullPointerException a) {
                     JOptionPane.showMessageDialog(null, "Verifique se as informações foram colocadas corretamente!");
                 }

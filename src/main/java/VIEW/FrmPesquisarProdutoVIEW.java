@@ -70,7 +70,6 @@ public class FrmPesquisarProdutoVIEW extends JFrame {
             image.setBounds(-14, 0, this.getWidth(), this.getHeight());
             image.setIcon(imageIcon);
             this.add(image);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -89,26 +88,21 @@ public class FrmPesquisarProdutoVIEW extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String nameProduct;
-
                 try {
                     nameProduct = txtPesquisar.getText();
                     if(nameProduct.isEmpty()) {
                         JOptionPane.showMessageDialog(null, "Digite algum nome!");
                         return;
                     }
-
                     ProdutoDTO produtoDTO = new ProdutoDTO();
                     produtoDTO.setNome(nameProduct);
-
                     produtoDAO = new ProdutoDAO();
-
                     try {
                         JOptionPane.showMessageDialog(null, produtoDAO.pesquisarProduto(nameProduct));
                     } catch (Exception g) {
                         JOptionPane.showMessageDialog(null, "Produto não encontrado!");
                         g.printStackTrace();
                     }
-
                     int opcao = JOptionPane.showOptionDialog(
                             null,
                             "Deseja buscar um produto novamente?",
@@ -119,13 +113,11 @@ public class FrmPesquisarProdutoVIEW extends JFrame {
                             null, 
                             null 
                     );
-
                     if (opcao == JOptionPane.NO_OPTION) {
                         FrmMainMenuVIEW frmMainMenuVIEW = new FrmMainMenuVIEW();
                         frmMainMenuVIEW.setVisible(true);
                         dispose();
                     }
-
                 }catch (NullPointerException a) {
                     JOptionPane.showMessageDialog(null, "Verifique se as informações foram adicionadas corretamente!");
                 }

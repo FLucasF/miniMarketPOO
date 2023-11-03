@@ -1,4 +1,5 @@
 package DTO;
+
 public class ProdutoDTO {
     private String nome;
     private int quantidade;

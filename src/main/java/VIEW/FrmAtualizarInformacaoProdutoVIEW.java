@@ -2,6 +2,7 @@ package VIEW;
 
 import DAO.ProdutoDAO;
 import DTO.ProdutoDTO;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -15,6 +16,7 @@ import java.io.IOException;
 
 public class FrmAtualizarInformacaoProdutoVIEW extends JFrame {
     private ProdutoDAO produtoDAO = new ProdutoDAO();
+
     public FrmAtualizarInformacaoProdutoVIEW() {
         setTitle("Atualizar Produto");
         setLayout(null);
@@ -87,14 +89,12 @@ public class FrmAtualizarInformacaoProdutoVIEW extends JFrame {
             img = ImageIO.read(new File("src" + File.separator + "main" + File.separator +
                     "java" + File.separator + "VIEW" + File.separator + "imagem" + File.separator +
                     "backGroundFuncionalidades.png"));
-
             instImage = img.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);
             JLabel image = new JLabel();
             ImageIcon imageIcon = new ImageIcon(instImage);
             image.setBounds(-14, 0, this.getWidth(), this.getHeight());
             image.setIcon(imageIcon);
             this.add(image);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -111,36 +111,28 @@ public class FrmAtualizarInformacaoProdutoVIEW extends JFrame {
          * 7. Trata exceções do tipo NullPointerException, se ocorrerem ao coletar informações dos campos de entrada.
          * @param e O evento de ação que acionou este ActionListener.
          */
-         btnAtualizar.addActionListener(new ActionListener() {
+        btnAtualizar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String nome, valor, quantidade;
-
                 try {
                     nome = txtNomeAtualizar.getText();
                     valor = txtValorAtualizar.getText();
                     quantidade = txtQuantidadeAtualizar.getText();
-
-                    if(nome.isEmpty() || quantidade.isEmpty() || valor.isEmpty()) { //VERIFICAR SE EXISTE INFORMAÇÕES
+                    if (nome.isEmpty() || quantidade.isEmpty() || valor.isEmpty()) { //VERIFICAR SE EXISTE INFORMAÇÕES
                         JOptionPane.showMessageDialog(null, "Verifique se colocou as informações corretamente");
                         return;
                     }
-
-
                     ProdutoDTO produtoDTO = new ProdutoDTO();
                     produtoDTO.setNome(nome);
                     produtoDTO.setValor(Double.parseDouble(valor));
                     produtoDTO.setQuantidade(Integer.parseInt(quantidade));
-
-                    if(!produtoDAO.verificaProduto(produtoDTO.getNome())) { //VERIFICA SE EXISTE O PRODUTO
+                    if (!produtoDAO.verificaProduto(produtoDTO.getNome())) { //VERIFICA SE EXISTE O PRODUTO
                         JOptionPane.showMessageDialog(null, "Não existe produto com este nome");
                         return;
                     }
-
                     boolean resposta = produtoDAO.alterarProduto(produtoDTO);
-
                     JOptionPane.showMessageDialog(null, "Produto atualizar com sucesso!");
-
                     int opcao = JOptionPane.showOptionDialog(
                             null,
                             "Deseja atualizar novamente?",
@@ -151,15 +143,12 @@ public class FrmAtualizarInformacaoProdutoVIEW extends JFrame {
                             null,
                             null
                     );
-
                     if (opcao == JOptionPane.NO_OPTION) {
                         FrmMainMenuVIEW frmMainMenuVIEW = new FrmMainMenuVIEW();
                         frmMainMenuVIEW.setVisible(true);
                         dispose();
                     }
-
-
-                }catch (NullPointerException a) {
+                } catch (NullPointerException a) {
                     JOptionPane.showMessageDialog(null, "Verifique se as informações foram adicionadas corretamente!");
                 }
             }
@@ -174,7 +163,7 @@ public class FrmAtualizarInformacaoProdutoVIEW extends JFrame {
          * 4. Chama o método "dispose()" na janela atual, que libera os recursos associados à janela e a fecha de forma controlada.
          */
         this.addWindowListener(new WindowAdapter() {
-            public void windowClosing (WindowEvent e) {
+            public void windowClosing(WindowEvent e) {
                 FrmMainMenuVIEW frmMainMenuVIEW = new FrmMainMenuVIEW();
                 frmMainMenuVIEW.setVisible(true);
                 dispose();

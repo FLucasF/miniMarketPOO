@@ -1,13 +1,9 @@
-
-
 package DAO;
 
 import DTO.ProdutoDTO;
-
 import javax.swing.*;
 import java.sql.*;
 import java.util.ArrayList;
-
 
 public class ProdutoDAO implements ProductDAO_Interface {
     private ProdutoDTO produto;
