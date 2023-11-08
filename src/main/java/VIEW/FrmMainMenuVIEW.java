@@ -29,17 +29,17 @@ public class FrmMainMenuVIEW extends JFrame {
         label.setForeground(Color.black);
         add(label);
 
-        JButton btnCadastrarMenu = new JButton("Cadastrar");
-        btnCadastrarMenu.setBounds(135, 100, 100, 30);
-        btnCadastrarMenu.setForeground(Color.white);
-        btnCadastrarMenu.setBackground(Color.black);
-        add(btnCadastrarMenu);
+        JButton btnCadastrar = new JButton("Cadastrar");
+        btnCadastrar.setBounds(135, 100, 100, 30);
+        btnCadastrar.setForeground(Color.white);
+        btnCadastrar.setBackground(Color.black);
+        add(btnCadastrar);
 
-        JButton btnExcluirMenu = new JButton("Excluir");
-        btnExcluirMenu.setBounds(135, 150, 100, 30);
-        btnExcluirMenu.setForeground(Color.white);
-        btnExcluirMenu.setBackground(Color.black);
-        add(btnExcluirMenu);
+        JButton btnExcluir = new JButton("Excluir");
+        btnExcluir.setBounds(135, 150, 100, 30);
+        btnExcluir.setForeground(Color.white);
+        btnExcluir.setBackground(Color.black);
+        add(btnExcluir);
 
         JButton btnBuscarProduto = new JButton("Pesquisar");
         btnBuscarProduto.setBounds(135, 200, 100, 30);
@@ -47,11 +47,11 @@ public class FrmMainMenuVIEW extends JFrame {
         btnBuscarProduto.setBackground(Color.black);
         add(btnBuscarProduto);
 
-        JButton btnAtualizarMenu = new JButton("Atualizar");
-        btnAtualizarMenu.setBounds(135, 250, 100, 30);
-        btnAtualizarMenu.setForeground(Color.white);
-        btnAtualizarMenu.setBackground(Color.black);
-        add(btnAtualizarMenu);
+        JButton btnAtualizar = new JButton("Atualizar");
+        btnAtualizar.setBounds(135, 250, 100, 30);
+        btnAtualizar.setForeground(Color.white);
+        btnAtualizar.setBackground(Color.black);
+        add(btnAtualizar);
 
         JButton btnListarMenu = new JButton("Listar");
         btnListarMenu.setBounds(135, 300, 100, 30);
@@ -98,9 +98,9 @@ public class FrmMainMenuVIEW extends JFrame {
                 dispose();
             }
         });
-        btnCadastrarMenu.addActionListener(this::btnCadastrarMenu);
-        btnAtualizarMenu.addActionListener(this::btnAtualizarMenu);
-        btnExcluirMenu.addActionListener(this::btnExcluirMenu);
+        btnCadastrar.addActionListener(this::btnCadastrarMenu);
+        btnAtualizar.addActionListener(this::btnAtualizarMenu);
+        btnExcluir.addActionListener(this::btnExcluirMenu);
         btnListarMenu.addActionListener(this::btnListarMenu);
         btnBuscarProduto.addActionListener(this::btnBuscarProduto);
     }

@@ -1,16 +1,13 @@
 package DAOTest;
 
 import DAO.ProdutoDAO;
-import DAO.ProdutoNaoExistenteException;
 import DTO.ProdutoDTO;
 import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
 
 public class ProdutoDAOTest {
     @Mock

@@ -41,11 +41,11 @@ public class FrmExcluirProdutoVIEW extends JFrame {
         txtExcluir.setForeground(Color.black);
         add(txtExcluir);
 
-        JButton btnExcluirMenu = new JButton("Excluir");
-        btnExcluirMenu.setBounds(135, 150, 100, 30);
-        btnExcluirMenu.setForeground(Color.white);
-        btnExcluirMenu.setBackground(Color.black);
-        add(btnExcluirMenu);
+        JButton btnExcluir = new JButton("Excluir");
+        btnExcluir.setBounds(135, 150, 100, 30);
+        btnExcluir.setForeground(Color.white);
+        btnExcluir.setBackground(Color.black);
+        add(btnExcluir);
 
         /*
          * Este código realiza as seguintes ações:
@@ -72,7 +72,7 @@ public class FrmExcluirProdutoVIEW extends JFrame {
         }
 
         /*
-         * Quando o botão "btnExcluirMenu" é pressionado. Ele realiza as seguintes ações:
+         * Quando o botão "btnExcluir" é pressionado. Ele realiza as seguintes ações:
          * 1. Obtém o nome do produto a ser excluído a partir do campo de entrada de texto "txtExcluir".
          * 2. Cria um objeto ProdutoDTO com o nome do produto a ser excluído.
          * 3. Cria um objeto ProdutoDAO para realizar a operação de exclusão do produto no banco de dados.
@@ -82,7 +82,7 @@ public class FrmExcluirProdutoVIEW extends JFrame {
          * 7. Trata exceções do tipo NullPointerException, se ocorrerem ao coletar informações dos campos de entrada.
          * @param e O evento de ação que acionou este ActionListener.
          */
-        btnExcluirMenu.addActionListener(new ActionListener() {
+        btnExcluir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String nameProduct;
