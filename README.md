@@ -287,7 +287,7 @@ Em seguida, o método cadastrarUsuario do `usuarioDAO` é chamado para cadastrar
 
 - Exclusão do usuário:
 
-Após o cadastro do usuário, o teste tenta excluir o mesmo usuário usando o método `excluirUsuario` do `usuarioDAO`.
+  Após o cadastro do usuário, o teste tenta excluir o mesmo usuário usando o método `excluirUsuario` do `usuarioDAO`.
 É verificado se a exclusão foi bem-sucedida através da asserção `assertTrue(excluir)`.
 ## 🛠️ Construído com
 
