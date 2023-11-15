@@ -18,7 +18,7 @@ public class Conexao {
      */
     public Connection conectaBD () {
         try {
-            String url = "jdbc:mysql://localhost:3306/bancomarket?user=root&password=1234";
+            String url = "jdbc:mysql://localhost:3306/NOMEBANCO?user=USUARIO&password=SENHA";
             conn = DriverManager.getConnection(url);
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Conexao" + e.getMessage());
